@@ -1,6 +1,7 @@
 // v01 : Suppress interrupts
 // v02 : Temp Air_Eau et changement de couleurs jcb - Save 07-27
 // v03 : String serverName = "http://192.168.129.100:82/";
+// v04 : Display Pression
 #include <Arduino.h>
 #include <TFT_eSPI.h>
 #include <SPI.h>
@@ -207,6 +208,7 @@ void loop() {
               Loop += interDelay;
               jcbDHTT.processSensor(payload,tft);
               delay ( interDelay);
+              jcbBMPP.processSensor(payload,tft);
               Loop += interDelay;
               jcbDJ1.processSensor(payload,tft);
             }
