@@ -2,6 +2,7 @@
 // v02 : Temp Air_Eau et changement de couleurs jcb - Save 07-27
 // v03 : String serverName = "http://192.168.129.100:82/";
 // v04 : Display Pression
+// v05 : Display Temp in Pollhouse
 #include <Arduino.h>
 #include <TFT_eSPI.h>
 #include <SPI.h>
@@ -208,9 +209,11 @@ void loop() {
               Loop += interDelay;
               jcbDHTT.processSensor(payload,tft);
               delay ( interDelay);
-              jcbBMPP.processSensor(payload,tft);
+              jcbBMPT.processSensor(payload,tft); // T° dans poolhouse
               Loop += interDelay;
-              jcbDJ1.processSensor(payload,tft);
+              jcbBMPP.processSensor(payload,tft); // pression dans poolhouse
+              Loop += interDelay;
+              jcbDJ1.processSensor(payload,tft); // sonde Piscine
             }
               
 

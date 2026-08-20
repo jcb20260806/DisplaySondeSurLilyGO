@@ -1,2 +1,3 @@
 # Display_Sonde_Piscine_Sur_LilyGo_Repository
 Display_Sonde_Piscine_Sur_LilyGo_Repository
+V4 et v5 display info d epollhouse car dht ne fonctionne pas
